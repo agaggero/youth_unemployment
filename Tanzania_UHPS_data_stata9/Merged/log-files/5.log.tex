@@ -1,0 +1,13 @@
+. gen astart= survey - starty
+(196 missing values generated)
+{\smallskip}
+. gen agestart= age - astart
+(213 missing values generated)
+{\smallskip}
+. drop if agestart<0
+(8 observations deleted)
+{\smallskip}
+. gen agestart2=agestart{\caret}2
+(213 missing values generated)
+{\smallskip}
+. 

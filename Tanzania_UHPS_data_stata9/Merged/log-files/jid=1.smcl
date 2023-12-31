@@ -1,0 +1,818 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\lexag14\Desktop\University\PhD\Returns To Educatio - Tanzania\Tanzania DataSet\Tanzania_UHPS_data_stata9\Merged\log-files\jid=1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 2 Apr 2012, 14:01:16
+{txt}
+{com}. 
+. tab schooling
+
+  {txt}schooling {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         35       14.89       14.89
+{txt}          4 {c |}{res}         18        7.66       22.55
+{txt}          7 {c |}{res}        116       49.36       71.91
+{txt}          8 {c |}{res}          4        1.70       73.62
+{txt}         11 {c |}{res}         38       16.17       89.79
+{txt}         12 {c |}{res}         14        5.96       95.74
+{txt}         13 {c |}{res}          8        3.40       99.15
+{txt}         16 {c |}{res}          1        0.43       99.57
+{txt}         17 {c |}{res}          1        0.43      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        235      100.00
+{txt}
+{com}. tab female
+
+     {txt}female {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         99       42.31       42.31
+{txt}          1 {c |}{res}        135       57.69      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        234      100.00
+{txt}
+{com}. tab empstatus
+
+                              {txt}empstatus {c |}      Freq.     Percent        Cum.
+{hline 40}{c +}{hline 35}
+                          Self employed {c |}{res}         81       55.86       55.86
+                             {txt}Unemployed {c |}{res}          1        0.69       56.55
+                          {txt}Wage employed {c |}{res}         63       43.45      100.00
+{txt}{hline 40}{c +}{hline 35}
+                                  Total {c |}{res}        145      100.00
+{txt}
+{com}. tab wage, sum(schooling)
+
+            {txt}{c |}        Summary of schooling
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 6.6184971   3.5640492         173
+  {txt}        1 {c |}  {res} 7.9677419   4.1289372          62
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 6.9744681   3.7598002         235
+{txt}
+{com}. tab wage, sum(age)
+
+            {txt}{c |}           Summary of age
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 33.919075   14.249616         173
+  {txt}        1 {c |}  {res} 34.887097    11.33702          62
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 34.174468   13.525514         235
+{txt}
+{com}. tab wage, sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 24.268293   8.2657239          82
+  {txt}        1 {c |}  {res} 25.467742   8.5021072          62
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 24.784722   8.3600475         144
+{txt}
+{com}. tab wage, sum(children)
+
+            {txt}{c |}         Summary of children
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 3.8076923   3.3706881          26
+  {txt}        1 {c |}  {res}       2.2   2.5690465          15
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 3.2195122   3.1663243          41
+{txt}
+{com}. tab wage, sum(married)
+
+            {txt}{c |}         Summary of married
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}  .7037037   .46532163          27
+  {txt}        1 {c |}  {res} .53333333   .51639778          15
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} .64285714    .4849656          42
+{txt}
+{com}. tab wage,  sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 24.268293   8.2657239          82
+  {txt}        1 {c |}  {res} 25.467742   8.5021072          62
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 24.784722   8.3600475         144
+{txt}
+{com}. tab wage, sum(hhbusiness)
+
+            {txt}{c |}        Summary of hhbusiness
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} .26315789   .45241393          19
+  {txt}        1 {c |}  {res} .09090909   .30151134          11
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}        .2    .4068381          30
+{txt}
+{com}. tab wage, sum(fed)
+
+            {txt}{c |}           Summary of fed
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 6.8888889   5.8791243          27
+  {txt}        1 {c |}  {res} 7.3333333   6.1256681          15
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}  7.047619   5.8973015          42
+{txt}
+{com}. tab wage, sum(med)
+
+            {txt}{c |}           Summary of med
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 3.6296296   5.0850319          27
+  {txt}        1 {c |}  {res} 7.2857143   5.6897826          14
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 4.8780488   5.5145042          41
+{txt}
+{com}. tab wage, sum(promoted)
+
+            {txt}{c |}         Summary of hh2a46a_
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          1 {c |}  {res}     .1875         .75          16
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}     .1875         .75          16
+{txt}
+{com}. tab wage, sum(happy)
+
+            {txt}{c |}          Summary of happy
+       wage {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          1 {c |}  {res}    1.5625   1.6720746          16
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    1.5625   1.6720746          16
+{txt}
+{com}. tab self, sum(schooling)
+
+            {txt}{c |}        Summary of schooling
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 6.9423077   3.9777452         156
+  {txt}        1 {c |}  {res} 7.0379747   3.3106008          79
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 6.9744681   3.7598002         235
+{txt}
+{com}. tab self, sum(age)
+
+            {txt}{c |}           Summary of age
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 33.269231   14.198749         156
+  {txt}        1 {c |}  {res} 35.962025   11.971594          79
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 34.174468   13.525514         235
+{txt}
+{com}. tab self, sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 25.086957   8.5314972          69
+  {txt}        1 {c |}  {res} 24.506667    8.246823          75
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 24.784722   8.3600475         144
+{txt}
+{com}. tab self, sum(children)
+
+            {txt}{c |}         Summary of children
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 2.4705882   2.5277868          17
+  {txt}        1 {c |}  {res}      3.75   3.5046553          24
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 3.2195122   3.1663243          41
+{txt}
+{com}. tab self, sum(married)
+
+            {txt}{c |}         Summary of married
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} .55555556   .51130999          18
+  {txt}        1 {c |}  {res} .70833333   .46430562          24
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} .64285714    .4849656          42
+{txt}
+{com}. tab self, sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 25.086957   8.5314972          69
+  {txt}        1 {c |}  {res} 24.506667    8.246823          75
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 24.784722   8.3600475         144
+{txt}
+{com}. tab self, sum(hhbusiness)
+
+            {txt}{c |}        Summary of hhbusiness
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} .14285714   .36313652          14
+  {txt}        1 {c |}  {res}       .25    .4472136          16
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}        .2    .4068381          30
+{txt}
+{com}. tab self, sum(fed)
+
+            {txt}{c |}           Summary of fed
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}       6.3   5.7408967          20
+  {txt}        1 {c |}  {res} 7.7272727   6.0880978          22
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}  7.047619   5.8973015          42
+{txt}
+{com}. tab self, sum(med)
+
+            {txt}{c |}           Summary of med
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 5.8947368    5.556725          19
+  {txt}        1 {c |}  {res}         4   5.4510812          22
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 4.8780488   5.5145042          41
+{txt}
+{com}. tab self, sum(promoted)
+
+            {txt}{c |}         Summary of hh2a46a_
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}     .1875         .75          16
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}     .1875         .75          16
+{txt}
+{com}. tab self, sum(happy)
+
+            {txt}{c |}          Summary of happy
+       self {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}    1.5625   1.6720746          16
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    1.5625   1.6720746          16
+{txt}
+{com}. sum fed med
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}fed {c |}{res}        42    7.047619    5.897301          0         20
+{txt}{space 9}med {c |}{res}        41    4.878049    5.514504          0         16
+{txt}
+{com}. tab debt
+
+       {txt}debt {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          3       33.33       33.33
+{txt}          1 {c |}{res}          6       66.67      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}          9      100.00
+{txt}
+{com}. sum distprim
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}distprim {c |}{res}        42    9.678571     11.3706         .5         40
+{txt}
+{com}. sum distsec
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}distsec {c |}{res}        42    24.45238    22.75206         .5         90
+{txt}
+{com}. tab public
+
+     {txt}public {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         37       82.22       82.22
+{txt}          1 {c |}{res}          8       17.78      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         45      100.00
+{txt}
+{com}. tab ngo
+
+        {txt}ngo {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         45      100.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         45      100.00
+{txt}
+{com}. tab civil
+
+      {txt}civil {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         44       97.78       97.78
+{txt}          1 {c |}{res}          1        2.22      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         45      100.00
+{txt}
+{com}. tab public, sum(earn)
+
+            {txt}{c |}           Summary of earn
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 1967.9434   6752.1957          30
+  {txt}        1 {c |}  {res} 2832.8112   2130.5786           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 2150.0209   6059.7743          38
+{txt}
+{com}. tab public, sum(schooling)
+
+            {txt}{c |}        Summary of schooling
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 5.5882353    4.250616          34
+  {txt}        1 {c |}  {res}    11.375   1.8468119           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 6.6904762   4.5181914          42
+{txt}
+{com}. tab public, sum(age)
+
+            {txt}{c |}           Summary of age
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 40.882353    14.86457          34
+  {txt}        1 {c |}  {res}        41   7.4258237           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 40.904762   13.684261          42
+{txt}
+{com}. tab public, sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}  23.96875   10.129753          32
+  {txt}        1 {c |}  {res}     24.25   4.3996753           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    24.025   9.2222904          40
+{txt}
+{com}. tab public, sum(children)
+
+            {txt}{c |}         Summary of children
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 3.1515152   3.2893884          33
+  {txt}        1 {c |}  {res}       3.5   2.7774603           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 3.2195122   3.1663243          41
+{txt}
+{com}. tab public, sum(married)
+
+            {txt}{c |}         Summary of married
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} .58823529   .49955417          34
+  {txt}        1 {c |}  {res}      .875   .35355339           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} .64285714    .4849656          42
+{txt}
+{com}. tab public, sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}  23.96875   10.129753          32
+  {txt}        1 {c |}  {res}     24.25   4.3996753           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    24.025   9.2222904          40
+{txt}
+{com}. tab public, sum(hhbusiness)
+
+            {txt}{c |}        Summary of hhbusiness
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}       .25   .44232587          24
+  {txt}        1 {c |}  {res}         0           0           6
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}        .2    .4068381          30
+{txt}
+{com}. tab public, sum(fed)
+
+            {txt}{c |}           Summary of fed
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}      7.25   6.0694901          32
+  {txt}        1 {c |}  {res}       6.5   6.3019271           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}       7.1   6.0417352          40
+{txt}
+{com}. tab public, sum(med)
+
+            {txt}{c |}           Summary of med
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 4.3870968   5.7831792          31
+  {txt}        1 {c |}  {res}      6.75   5.0071378           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 4.8717949   5.6530359          39
+{txt}
+{com}. tab empstatus, sum(distprim)
+
+                                  {txt}{c |}         Summary of distprim
+                        empstatus {c |}        Mean   Std. Dev.       Freq.
+{hline 34}{c +}{hline 36}
+                    Self employed {c |}  {res} 12.854167   13.454819          24
+                       {txt}Unemployed {c |}  {res}        .5           0           1
+                    {txt}Wage employed {c |}  {res} 5.4666667   5.5564206          15
+{txt}{hline 34}{c +}{hline 36}
+                            Total {c |}  {res}     9.775   11.533646          40
+{txt}
+{com}. tab public, sum(distsec)
+
+            {txt}{c |}         Summary of distsec
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 26.867647   23.503807          34
+  {txt}        1 {c |}  {res}   14.1875   16.701021           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 24.452381    22.75206          42
+{txt}
+{com}. tab public, sum(earn)
+
+            {txt}{c |}           Summary of earn
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 1967.9434   6752.1957          30
+  {txt}        1 {c |}  {res} 2832.8112   2130.5786           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 2150.0209   6059.7743          38
+{txt}
+{com}. tab public, sum(earnstart)
+
+            {txt}{c |}        Summary of earnstart
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 689.74869   944.63494           6
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 689.74869   944.63494           6
+{txt}
+{com}. tab public, sum(promoted)
+
+            {txt}{c |}         Summary of hh2a46a_
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}         0           0           8
+  {txt}        1 {c |}  {res}      .375   1.0606602           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}     .1875         .75          16
+{txt}
+{com}. tab public, sum(happy)
+
+            {txt}{c |}          Summary of happy
+     public {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}         1   1.4142136           8
+  {txt}        1 {c |}  {res}     2.125   1.8077215           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    1.5625   1.6720746          16
+{txt}
+{com}. 
+. tab civil, sum(earn)
+
+            {txt}{c |}           Summary of earn
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 2025.6971   6094.0324          37
+  {txt}        1 {c |}  {res}      6750           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 2150.0209   6059.7743          38
+{txt}
+{com}. tab civil, sum(schooling)
+
+            {txt}{c |}        Summary of schooling
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 6.5609756   4.4947123          41
+  {txt}        1 {c |}  {res}        12           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 6.6904762   4.5181914          42
+{txt}
+{com}. tab civil, sum(age)
+
+            {txt}{c |}           Summary of age
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}  40.95122   13.850905          41
+  {txt}        1 {c |}  {res}        39           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 40.904762   13.684261          42
+{txt}
+{com}. tab civil, sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 23.820513   9.2505243          39
+  {txt}        1 {c |}  {res}        32           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    24.025   9.2222904          40
+{txt}
+{com}. tab civil, sum(children)
+
+            {txt}{c |}         Summary of children
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}     3.225   3.2064638          40
+  {txt}        1 {c |}  {res}         3           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 3.2195122   3.1663243          41
+{txt}
+{com}. tab civil, sum(married)
+
+            {txt}{c |}         Summary of married
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} .63414634   .48765242          41
+  {txt}        1 {c |}  {res}         1           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} .64285714    .4849656          42
+{txt}
+{com}. tab civil, sum(agestart)
+
+            {txt}{c |}         Summary of agestart
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 23.820513   9.2505243          39
+  {txt}        1 {c |}  {res}        32           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    24.025   9.2222904          40
+{txt}
+{com}. tab civil, sum(hhbusiness)
+
+            {txt}{c |}        Summary of hhbusiness
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}        .2    .4068381          30
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}        .2    .4068381          30
+{txt}
+{com}. tab civil, sum(fed)
+
+            {txt}{c |}           Summary of fed
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 7.1282051    6.118047          39
+  {txt}        1 {c |}  {res}         6           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}       7.1   6.0417352          40
+{txt}
+{com}. tab civil, sum(med)
+
+            {txt}{c |}           Summary of med
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 4.8421053   5.7258367          38
+  {txt}        1 {c |}  {res}         6           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 4.8717949   5.6530359          39
+{txt}
+{com}. tab empstatus, sum(distprim)
+
+                                  {txt}{c |}         Summary of distprim
+                        empstatus {c |}        Mean   Std. Dev.       Freq.
+{hline 34}{c +}{hline 36}
+                    Self employed {c |}  {res} 12.854167   13.454819          24
+                       {txt}Unemployed {c |}  {res}        .5           0           1
+                    {txt}Wage employed {c |}  {res} 5.4666667   5.5564206          15
+{txt}{hline 34}{c +}{hline 36}
+                            Total {c |}  {res}     9.775   11.533646          40
+{txt}
+{com}. tab civil, sum(distsec)
+
+            {txt}{c |}         Summary of distsec
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 24.731707   22.961679          41
+  {txt}        1 {c |}  {res}        13           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 24.452381    22.75206          42
+{txt}
+{com}. tab civil, sum(earn)
+
+            {txt}{c |}           Summary of earn
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 2025.6971   6094.0324          37
+  {txt}        1 {c |}  {res}      6750           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 2150.0209   6059.7743          38
+{txt}
+{com}. tab civil, sum(earnstart)
+
+            {txt}{c |}        Summary of earnstart
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 689.74869   944.63494           6
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 689.74869   944.63494           6
+{txt}
+{com}. tab civil, sum(promoted)
+
+            {txt}{c |}         Summary of hh2a46a_
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}        .2   .77459667          15
+  {txt}        1 {c |}  {res}         0           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}     .1875         .75          16
+{txt}
+{com}. tab civil, sum(happy)
+
+            {txt}{c |}          Summary of happy
+      civil {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}       1.4   1.5946339          15
+  {txt}        1 {c |}  {res}         4           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res}    1.5625   1.6720746          16
+{txt}
+{com}. 
+. sum earnstart earn
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 3}earnstart {c |}{res}         6    689.7487    944.6349          0   2285.714
+{txt}{space 8}earn {c |}{res}       134    29384.38    276267.9          0    3200000
+{txt}
+{com}. sum age
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 9}age {c |}{res}       235    34.17447    13.52551         16         86
+{txt}
+{com}. sum agestart
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}agestart {c |}{res}       144    24.78472    8.360048          8         51
+{txt}
+{com}. tab schooling, sum(age)
+
+            {txt}{c |}           Summary of age
+  schooling {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 44.257143   18.887193          35
+  {txt}        4 {c |}  {res} 52.666667   8.3595666          18
+  {txt}        7 {c |}  {res} 27.913793     7.54761         116
+  {txt}        8 {c |}  {res}     52.75   6.1846584           4
+  {txt}       11 {c |}  {res} 29.736842   7.8626184          38
+  {txt}       12 {c |}  {res} 40.857143   12.334175          14
+  {txt}       13 {c |}  {res}        36   11.612801           8
+  {txt}       16 {c |}  {res}        37           0           1
+  {txt}       17 {c |}  {res}        58           0           1
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 34.174468   13.525514         235
+{txt}
+{com}. sum primary secondary tertiary vocational
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}primary {c |}{res}       238    .5630252    .4970573          0          1
+{txt}{space 3}secondary {c |}{res}       238           0           0          0          0
+{txt}{space 4}tertiary {c |}{res}       238           0           0          0          0
+{txt}{space 2}vocational {c |}{res}       238    .0336134    .1806119          0          1
+{txt}
+{com}. tab primary, sum(age)
+
+            {txt}{c |}           Summary of age
+    primary {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 38.069307   15.111094         101
+  {txt}        1 {c |}  {res} 31.238806   11.400553         134
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 34.174468   13.525514         235
+{txt}
+{com}. tab secondary, sum(age)
+
+            {txt}{c |}           Summary of age
+  secondary {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 34.174468   13.525514         235
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 34.174468   13.525514         235
+{txt}
+{com}. tab tertiary, sum(age)
+
+            {txt}{c |}           Summary of age
+   tertiary {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 34.174468   13.525514         235
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 34.174468   13.525514         235
+{txt}
+{com}. tab vocational, sum(age)
+
+            {txt}{c |}           Summary of age
+ vocational {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res} 33.973568   13.460503         227
+  {txt}        1 {c |}  {res}    39.875   15.075406           8
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 34.174468   13.525514         235
+{txt}
+{com}. tab hhdeath
+
+    {txt}hhdeath {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}        224       94.12       94.12
+{txt}          1 {c |}{res}         14        5.88      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}        238      100.00
+{txt}
+{com}. tab married
+
+    {txt}married {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         15       35.71       35.71
+{txt}          1 {c |}{res}         27       64.29      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         42      100.00
+{txt}
+{com}. tab children
+
+   {txt}children {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          6       14.63       14.63
+{txt}          1 {c |}{res}          6       14.63       29.27
+{txt}          2 {c |}{res}          9       21.95       51.22
+{txt}          3 {c |}{res}          8       19.51       70.73
+{txt}          4 {c |}{res}          4        9.76       80.49
+{txt}          5 {c |}{res}          2        4.88       85.37
+{txt}          6 {c |}{res}          1        2.44       87.80
+{txt}          7 {c |}{res}          1        2.44       90.24
+{txt}         10 {c |}{res}          2        4.88       95.12
+{txt}         12 {c |}{res}          1        2.44       97.56
+{txt}         13 {c |}{res}          1        2.44      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         41      100.00
+{txt}
+{com}. sum children
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}children {c |}{res}        41    3.219512    3.166324          0         13
+{txt}
+{com}. tab hhhead female
+
+           {txt}{c |}        female
+    hhhead {c |}         0          1 {c |}     Total
+{hline 11}{c +}{hline 22}{c +}{hline 10}
+         0 {c |}{res}         4         15 {txt}{c |}{res}        19 
+{txt}         1 {c |}{res}        18          5 {txt}{c |}{res}        23 
+{txt}{hline 11}{c +}{hline 22}{c +}{hline 10}
+     Total {c |}{res}        22         20 {txt}{c |}{res}        42 
+
+{txt}
+{com}. tab empstatus, sum(female)
+
+                                  {txt}{c |}          Summary of female
+                        empstatus {c |}        Mean   Std. Dev.       Freq.
+{hline 34}{c +}{hline 36}
+                    Self employed {c |}  {res} .53846154   .50174521          78
+                       {txt}Unemployed {c |}  {res}         0           0           1
+                    {txt}Wage employed {c |}  {res} .53225806   .50303153          62
+{txt}{hline 34}{c +}{hline 36}
+                            Total {c |}  {res} .53191489    .5007593         141
+{txt}
+{com}. 
+. tab hhbusiness 
+
+ {txt}hhbusiness {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}         24       80.00       80.00
+{txt}          1 {c |}{res}          6       20.00      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}         30      100.00
+{txt}
+{com}. tab hhbustype
+
+        {txt}hh3a9 {c |}      Freq.     Percent        Cum.
+{hline 14}{c +}{hline 35}
+        Other {c |}{res}          2       33.33       33.33
+      {txt}Trading {c |}{res}          4       66.67      100.00
+{txt}{hline 14}{c +}{hline 35}
+        Total {c |}{res}          6      100.00
+{txt}
+{com}. tab hhbustype, sum(self)
+
+             {txt}{c |}           Summary of self
+       hh3a9 {c |}        Mean   Std. Dev.       Freq.
+{hline 13}{c +}{hline 36}
+       Other {c |}  {res}         1           0           2
+     {txt}Trading {c |}  {res}        .5   .57735027           4
+{txt}{hline 13}{c +}{hline 36}
+       Total {c |}  {res} .66666667   .51639778           6
+{txt}
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\lexag14\Desktop\University\PhD\Returns To Educatio - Tanzania\Tanzania DataSet\Tanzania_UHPS_data_stata9\Merged\log-files\jid=1.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 2 Apr 2012, 14:01:16
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

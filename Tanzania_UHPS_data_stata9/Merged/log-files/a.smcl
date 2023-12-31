@@ -1,0 +1,25 @@
+{com}. 
+. xtdes
+
+     {txt}wid:  {res}443003{txt}, {res}1000002{txt}, ..., {res}1.924e+08                   {txt}n ={res}       1065
+     {txt}jid:  {res}1, 2, ..., 8                                      {txt}T ={res}          8
+           {txt}Delta(jid) = {res}1 unit
+           {txt}Span(jid)  = {res}8 periods
+           {txt}(wid*jid uniquely identifies each observation)
+
+Distribution of T_i:   min      5%     25%       50%       75%     95%     max
+                    {res}     1       1       1         2         3       5       8
+
+{txt}{col 6}Freq.  Percent    Cum. {c |}  Pattern
+ {hline 27}{c +}{c -}{c -}{hline 8}
+{res}      372     34.93   34.93{txt} {c |}  {res}1.......
+      312     29.30   64.23{txt} {c |}  {res}11......
+      205     19.25   83.47{txt} {c |}  {res}111.....
+      116     10.89   94.37{txt} {c |}  {res}1111....
+       41      3.85   98.22{txt} {c |}  {res}11111...
+       14      1.31   99.53{txt} {c |}  {res}111111..
+        3      0.28   99.81{txt} {c |}  {res}11111111
+        2      0.19  100.00{txt} {c |}  {res}1111111.
+{txt} {hline 27}{c +}{c -}{c -}{hline 8}
+{res}     1065    100.00        {txt} {c |}  {res}XXXXXXXX
+{txt}

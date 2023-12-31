@@ -1,0 +1,79 @@
+. 
+. 
+. gen jid=1
+
+. by wid: replace jid=2 if startdate[_n-1]!=.
+(1413 real changes made)
+
+. by wid: replace jid=3 if startdate[_n-2]!=.
+(797 real changes made)
+
+. by wid: replace jid=4 if startdate[_n-3]!=.
+(340 real changes made)
+
+. by wid: replace jid=5 if startdate[_n-4]!=.
+(118 real changes made)
+
+. by wid: replace jid=6 if startdate[_n-5]!=.
+(35 real changes made)
+
+. by wid: replace jid=7 if startdate[_n-6]!=.
+(10 real changes made)
+
+. by wid: replace jid=8 if startdate[_n-7]!=.
+(3 real changes made)
+
+. by wid: replace jid=9 if startdate[_n-8]!=.
+(1 real change made)
+
+. by wid: replace jid=10 if startdate[_n-9]!=.
+(0 real changes made)
+
+. by wid: replace jid=11 if startdate[_n-10]!=.
+(0 real changes made)
+
+. sort wid jid
+
+. tsset wid jid
+       panel variable:  wid (unbalanced)
+        time variable:  jid, 1 to 9
+                delta:  1 unit
+
+. 
+. 
+. list wid jid startdate stopdate empstatus in 16/35, sepby(wid)
+
+     +----------------------------------------------------------------+
+     |     wid   jid   startd~e   stopdate                  empstatus |
+     |----------------------------------------------------------------|
+ 16. | 2201101     1     1947m1    1959m11                   Employed |
+ 17. | 2201101     2    1959m11     1985m9                   Employed |
+ 18. | 2201101     3     1985m9     1995m1                   Employed |
+ 19. | 2201101     4     1995m1     2005m8                            |
+     |----------------------------------------------------------------|
+ 20. | 2201102     1     1957m6     1997m6                 unemployed |
+ 21. | 2201102     2     1997m6     2005m8                            |
+ 22. | 2201102     3     1999m8     2006m7                            |
+     |----------------------------------------------------------------|
+ 23. | 2201201     1     1980m1    1998m12                   Employed |
+ 24. | 2201201     2     1999m1    2002m12                   Employed |
+ 25. | 2201201     3     2003m5     2005m8                            |
+ 26. | 2201201     4     2006m8     2006m7    Clerical / office staff |
+     |----------------------------------------------------------------|
+ 27. | 2201202     1     2005m8     2006m7   Manual worker / labourer |
+     |----------------------------------------------------------------|
+ 28. | 2201301     1     1974m1     2005m8                            |
+     |----------------------------------------------------------------|
+ 29. | 2201302     1          .     2006m7                            |
+     |----------------------------------------------------------------|
+ 30. | 2201303     1     2006m8     2006m7   Manual worker / labourer |
+     |----------------------------------------------------------------|
+ 31. | 2201304     1     2005m8     2006m7   Manual worker / labourer |
+     |----------------------------------------------------------------|
+ 32. | 2201401     1    1977m10     1983m4                 unemployed |
+ 33. | 2201401     2     1983m6     1996m1                   Employed |
+ 34. | 2201401     3     1996m3     1999m6                 unemployed |
+ 35. | 2201401     4     1999m7     2004m7                   Employed |
+     +----------------------------------------------------------------+
+
+. 

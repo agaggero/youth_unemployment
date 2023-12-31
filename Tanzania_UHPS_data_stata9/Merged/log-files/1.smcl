@@ -1,0 +1,34 @@
+{com}. list wid startdate stopdate empstatus  in 16/35, sepby(wid)
+{txt}
+     {c TLC}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c TRC}
+     {c |} {res}    wid   startd~e   stopdate       empstatus {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 16. {c |} {res}2201101     1947m1    1959m11   Wage employed {txt}{c |}
+ 17. {c |} {res}2201101    1959m11     1985m9   Wage employed {txt}{c |}
+ 18. {c |} {res}2201101     1985m9     1995m1   Wage employed {txt}{c |}
+ 19. {c |} {res}2201101     1995m1     2005m8   Self employed {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 20. {c |} {res}2201102     1957m6     1997m6      Unemployed {txt}{c |}
+ 21. {c |} {res}2201102     1997m6     2005m8   Self employed {txt}{c |}
+ 22. {c |} {res}2201102     1999m8     2006m7   Self employed {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 23. {c |} {res}2201201     1980m1    1998m12   Wage employed {txt}{c |}
+ 24. {c |} {res}2201201     1999m1    2002m12   Wage employed {txt}{c |}
+ 25. {c |} {res}2201201     2003m5     2005m8   Self employed {txt}{c |}
+ 26. {c |} {res}2201201     2006m8     2006m7   Wage employed {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 27. {c |} {res}2201202     2005m8     2006m7   Wage employed {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 28. {c |} {res}2201301     1974m1     2005m8   Self employed {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 29. {c |} {res}2201302          .     2006m7                 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 30. {c |} {res}2201303     2006m8     2006m7   Wage employed {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 31. {c |} {res}2201304     2005m8     2006m7   Wage employed {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c RT}
+ 32. {c |} {res}2201401    1977m10     1983m4      Unemployed {txt}{c |}
+ 33. {c |} {res}2201401     1983m6     1996m1   Wage employed {txt}{c |}
+ 34. {c |} {res}2201401     1996m3     1999m6      Unemployed {txt}{c |}
+ 35. {c |} {res}2201401     1999m7     2004m7   Wage employed {txt}{c |}
+     {c BLC}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c BRC}

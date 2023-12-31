@@ -1,0 +1,79 @@
+{com}. 
+. 
+. gen jid=1
+{txt}
+{com}. by wid: replace jid=2 if startdate[_n-1]!=.
+{txt}(1413 real changes made)
+
+{com}. by wid: replace jid=3 if startdate[_n-2]!=.
+{txt}(797 real changes made)
+
+{com}. by wid: replace jid=4 if startdate[_n-3]!=.
+{txt}(340 real changes made)
+
+{com}. by wid: replace jid=5 if startdate[_n-4]!=.
+{txt}(118 real changes made)
+
+{com}. by wid: replace jid=6 if startdate[_n-5]!=.
+{txt}(35 real changes made)
+
+{com}. by wid: replace jid=7 if startdate[_n-6]!=.
+{txt}(10 real changes made)
+
+{com}. by wid: replace jid=8 if startdate[_n-7]!=.
+{txt}(3 real changes made)
+
+{com}. by wid: replace jid=9 if startdate[_n-8]!=.
+{txt}(1 real change made)
+
+{com}. by wid: replace jid=10 if startdate[_n-9]!=.
+{txt}(0 real changes made)
+
+{com}. by wid: replace jid=11 if startdate[_n-10]!=.
+{txt}(0 real changes made)
+
+{com}. sort wid jid
+{txt}
+{com}. tsset wid jid
+{res}{txt}{col 8}panel variable:  {res}wid (unbalanced)
+{txt}{col 9}time variable:  {res}{col 25}jid, 1 to 9
+{txt}{col 17}delta:  {res}1 unit
+{txt}
+{com}. 
+. 
+. list wid jid startdate stopdate empstatus in 16/35, sepby(wid)
+{txt}
+     {c TLC}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c TRC}
+     {c |} {res}    wid   jid   startd~e   stopdate                  empstatus {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 16. {c |} {res}2201101     1     1947m1    1959m11                   Employed {txt}{c |}
+ 17. {c |} {res}2201101     2    1959m11     1985m9                   Employed {txt}{c |}
+ 18. {c |} {res}2201101     3     1985m9     1995m1                   Employed {txt}{c |}
+ 19. {c |} {res}2201101     4     1995m1     2005m8                            {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 20. {c |} {res}2201102     1     1957m6     1997m6                 unemployed {txt}{c |}
+ 21. {c |} {res}2201102     2     1997m6     2005m8                            {txt}{c |}
+ 22. {c |} {res}2201102     3     1999m8     2006m7                            {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 23. {c |} {res}2201201     1     1980m1    1998m12                   Employed {txt}{c |}
+ 24. {c |} {res}2201201     2     1999m1    2002m12                   Employed {txt}{c |}
+ 25. {c |} {res}2201201     3     2003m5     2005m8                            {txt}{c |}
+ 26. {c |} {res}2201201     4     2006m8     2006m7    Clerical / office staff {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 27. {c |} {res}2201202     1     2005m8     2006m7   Manual worker / labourer {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 28. {c |} {res}2201301     1     1974m1     2005m8                            {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 29. {c |} {res}2201302     1          .     2006m7                            {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 30. {c |} {res}2201303     1     2006m8     2006m7   Manual worker / labourer {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 31. {c |} {res}2201304     1     2005m8     2006m7   Manual worker / labourer {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c RT}
+ 32. {c |} {res}2201401     1    1977m10     1983m4                 unemployed {txt}{c |}
+ 33. {c |} {res}2201401     2     1983m6     1996m1                   Employed {txt}{c |}
+ 34. {c |} {res}2201401     3     1996m3     1999m6                 unemployed {txt}{c |}
+ 35. {c |} {res}2201401     4     1999m7     2004m7                   Employed {txt}{c |}
+     {c BLC}{hline 9}{c -}{hline 5}{c -}{hline 10}{c -}{hline 10}{c -}{hline 26}{c BRC}
+
+{com}. 

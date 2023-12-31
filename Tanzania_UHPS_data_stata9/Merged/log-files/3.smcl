@@ -1,0 +1,34 @@
+{com}. list wid jid empstatus earn in 16/35 if empstatus!= "Retired"| empstatus!= "Unemployed", sepby(wid)
+{txt}
+     {c TLC}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c TRC}
+     {c |} {res}    wid   jid       empstatus       earn {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 16. {c |} {res}2201101     1   Wage employed       15.2 {txt}{c |}
+ 17. {c |} {res}2201101     2   Wage employed       17.5 {txt}{c |}
+ 18. {c |} {res}2201101     3   Wage employed   666.6667 {txt}{c |}
+ 19. {c |} {res}2201101     4   Self employed   535.7143 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 20. {c |} {res}2201102     1      Unemployed          . {txt}{c |}
+ 21. {c |} {res}2201102     2   Self employed   833.3333 {txt}{c |}
+ 22. {c |} {res}2201102     3   Self employed   466.6667 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 23. {c |} {res}2201201     1   Wage employed        250 {txt}{c |}
+ 24. {c |} {res}2201201     2   Wage employed        200 {txt}{c |}
+ 25. {c |} {res}2201201     3   Self employed   35.71429 {txt}{c |}
+ 26. {c |} {res}2201201     4   Wage employed   1333.333 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 27. {c |} {res}2201202     1   Wage employed   1333.333 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 28. {c |} {res}2201301     1   Self employed   27.77778 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 29. {c |} {res}2201302     1                          . {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 30. {c |} {res}2201303     1   Wage employed   833.3333 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 31. {c |} {res}2201304     1   Wage employed   1090.909 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c RT}
+ 32. {c |} {res}2201401     1      Unemployed          . {txt}{c |}
+ 33. {c |} {res}2201401     2   Wage employed   303.0303 {txt}{c |}
+ 34. {c |} {res}2201401     3      Unemployed          . {txt}{c |}
+ 35. {c |} {res}2201401     4   Wage employed        800 {txt}{c |}
+     {c BLC}{hline 9}{c -}{hline 5}{c -}{hline 15}{c -}{hline 10}{c BRC}

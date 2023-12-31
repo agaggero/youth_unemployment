@@ -1,0 +1,43 @@
+{com}. 
+.  gen cohort=0
+{txt}
+{com}.  replace cohort= 30 if bc40==1
+{txt}(129 real changes made)
+
+{com}.  replace cohort=40 if c40==1
+{txt}(258 real changes made)
+
+{com}.  replace cohort=50 if c50==1
+{txt}(394 real changes made)
+
+{com}.  replace cohort=60 if c60==1
+{txt}(632 real changes made)
+
+{com}.  replace cohort=70 if c70==1
+{txt}(663 real changes made)
+
+{com}.  replace cohort=80 if c80==1
+{txt}(172 real changes made)
+
+{com}.  replace cohort=90 if c90==1
+{txt}(1 real change made)
+
+{com}.  
+.  tab cohort, sum(schooling)
+
+            {txt}{c |}        Summary of schooling
+     cohort {c |}        Mean   Std. Dev.       Freq.
+{hline 12}{c +}{hline 36}
+          0 {c |}  {res}         7           0           1
+  {txt}       30 {c |}  {res} 7.9166667   2.0469834          72
+  {txt}       40 {c |}  {res} 10.153846   2.9134336         169
+  {txt}       50 {c |}  {res} 9.2101449   2.6709287         276
+  {txt}       60 {c |}  {res} 9.3163482   2.5994533         471
+  {txt}       70 {c |}  {res}  8.827051   2.3478169         451
+  {txt}       80 {c |}  {res} 8.0882353   1.9905395          68
+{txt}{hline 12}{c +}{hline 36}
+      Total {c |}  {res} 9.1206897   2.5795936        1508
+{txt}
+{com}.  sjlog close
+{smcl}
+{com}{sf}{ul off}

@@ -1,0 +1,389 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. sort wid startdate
+{txt}
+{com}. list wid startdate stopdate empstatus samejob in 16/35, sepby(wid)
+{txt}
+     {c TLC}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c TRC}
+     {c |} {res}    wid   startd~e   stopdate       empstatus   samejob {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 16. {c |} {res}2201101     1947m1    1959m11        Wage job         0 {txt}{c |}
+ 17. {c |} {res}2201101    1959m11     1985m9        Wage job         0 {txt}{c |}
+ 18. {c |} {res}2201101     1985m9     1995m1        Wage job         0 {txt}{c |}
+ 19. {c |} {res}2201101     1995m1     2005m8   Self employed         0 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 20. {c |} {res}2201102     1957m6     1997m6      Unemployed         0 {txt}{c |}
+ 21. {c |} {res}2201102     1997m6     2005m8   Self employed         0 {txt}{c |}
+ 22. {c |} {res}2201102     1999m8     2006m7   Self employed         1 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 23. {c |} {res}2201201     1980m1    1998m12        Wage job         0 {txt}{c |}
+ 24. {c |} {res}2201201     1999m1    2002m12        Wage job         0 {txt}{c |}
+ 25. {c |} {res}2201201     2003m5     2005m8   Self employed         0 {txt}{c |}
+ 26. {c |} {res}2201201     2006m8     2006m7        Wage job         0 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 27. {c |} {res}2201202     2005m8     2006m7        Wage job         0 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 28. {c |} {res}2201301     1974m1     2005m8   Self employed         0 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 29. {c |} {res}2201302          .     2006m7                         1 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 30. {c |} {res}2201303     2006m8     2006m7        Wage job         0 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 31. {c |} {res}2201304     2005m8     2006m7        Wage job         1 {txt}{c |}
+     {c LT}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c RT}
+ 32. {c |} {res}2201401    1977m10     1983m4      Unemployed         0 {txt}{c |}
+ 33. {c |} {res}2201401     1983m6     1996m1        Wage job         0 {txt}{c |}
+ 34. {c |} {res}2201401     1996m3     1999m6      Unemployed         0 {txt}{c |}
+ 35. {c |} {res}2201401     1999m7     2004m7        Wage job         0 {txt}{c |}
+     {c BLC}{hline 9}{c -}{hline 10}{c -}{hline 10}{c -}{hline 15}{c -}{hline 9}{c BRC}
+
+{com}. 
+. 
+. *fix up the mess from letting enumerators enter free text on highest ed variable
+. gen highested=""
+{txt}(2267 missing values generated)
+
+{com}. replace highested="None" if hh1a15=="Didn't go to school"
+{txt}highested was {res}str1{txt} now {res}str4
+{txt}(1 real change made)
+
+{com}. replace highested="" if hh1a15=="HH1A11A"
+{txt}(0 real changes made)
+
+{com}. replace highested="Masters" if hh1a15=="Masters"
+{txt}highested was {res}str4{txt} now {res}str7
+{txt}(8 real changes made)
+
+{com}. replace highested="Bachelor" if hh1a15=="Bachelor"
+{txt}highested was {res}str7{txt} now {res}str8
+{txt}(16 real changes made)
+
+{com}. replace highested="Ordinary diploma" if hh1a15=="Ordinary diploma"
+{txt}highested was {res}str8{txt} now {res}str16
+{txt}(109 real changes made)
+
+{com}. replace highested="Advanced diploma" if hh1a15=="Advanced diploma"
+{txt}(24 real changes made)
+
+{com}. replace highested="Middle School cert." if hh1a15=="cambridge certicate and middle shool ce"
+{txt}(0 real changes made)
+
+{com}. replace highested="Middle School cert." if hh1a15=="Middle School cert."
+{txt}highested was {res}str16{txt} now {res}str19
+{txt}(155 real changes made)
+
+{com}. replace highested="O Level" if hh1a15=="O Level"
+{txt}(220 real changes made)
+
+{com}. replace highested="A Level" if hh1a15=="A Level"
+{txt}(13 real changes made)
+
+{com}. replace highested="Bachelor" if hh1a15=="cerificate in teaching"
+{txt}(0 real changes made)
+
+{com}. replace highested="None" if hh1a15=="didn't go school"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="didn't go to sc"
+{txt}(0 real changes made)
+
+{com}. replace highested="None" if hh1a15=="didn't go to school"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="didn’t go to school"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="form two"
+{txt}(0 real changes made)
+
+{com}. replace highested="Primary" if hh1a15=="never completed form four"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="never got any certificate since did not"
+{txt}(0 real changes made)
+
+{com}. replace highested="None" if hh1a15=="none"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="nothing"
+{txt}(1 real change made)
+
+{com}. replace highested="Ordinary diploma" if hh1a15=="ordinary diploma"
+{txt}(6 real changes made)
+
+{com}. replace highested="Primary" if hh1a15=="standard eight"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 10 certificate"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 2"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 5"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 6"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="Primary Certificate"
+{txt}(728 real changes made)
+
+{com}. replace highested="Bachelor" if hh1a15=="teaching certificate"
+{txt}(1 real change made)
+
+{com}. replace highested="Bachelor" if hh1a15=="two years technical college"
+{txt}(1 real change made)
+
+{com}. replace highested="Vocational" if hh1a15=="Vocational training cert."
+{txt}(139 real changes made)
+
+{com}. replace highested="Vocational" if hh1a15=="T/T Certificate"
+{txt}(76 real changes made)
+
+{com}. 
+. 
+. tab highested
+
+          {txt}highested {c |}      Freq.     Percent        Cum.
+{hline 20}{c +}{hline 35}
+            A Level {c |}{res}         13        0.86        0.86
+   {txt}Advanced diploma {c |}{res}         24        1.59        2.45
+           {txt}Bachelor {c |}{res}         18        1.19        3.65
+            {txt}Masters {c |}{res}          8        0.53        4.18
+{txt}Middle School cert. {c |}{res}        155       10.28       14.46
+               {txt}None {c |}{res}          6        0.40       14.85
+            {txt}O Level {c |}{res}        220       14.59       29.44
+   {txt}Ordinary diploma {c |}{res}        115        7.63       37.07
+            {txt}Primary {c |}{res}        734       48.67       85.74
+         {txt}Vocational {c |}{res}        215       14.26      100.00
+{txt}{hline 20}{c +}{hline 35}
+              Total {c |}{res}      1,508      100.00
+{txt}
+{com}. 
+. 
+. 
+. gen schooling= 0 if highested=="None"
+{txt}(2261 missing values generated)
+
+{com}. replace schooling=7  if highested=="Primary" & wdoby>1962
+{txt}(734 real changes made)
+
+{com}. replace schooling=4  if highested=="Primary" & wdoby<=1962
+{txt}(0 real changes made)
+
+{com}. replace schooling=8 if highested=="Middle School cert."
+{txt}(155 real changes made)
+
+{com}. replace schooling=11  if highested=="O Level" & wdoby>1962
+{txt}(220 real changes made)
+
+{com}. replace schooling=12  if highested=="O Level" & wdoby<=1962
+{txt}(0 real changes made)
+
+{com}. replace schooling=13  if highested=="A Level" & wdoby>1962
+{txt}(13 real changes made)
+
+{com}. replace schooling=14  if highested=="A Level" & wdoby<=1962
+{txt}(0 real changes made)
+
+{com}. replace schooling=12  if highested=="Advanced diploma" 
+{txt}(24 real changes made)
+
+{com}. replace schooling=13  if highested=="Ordinary diploma" 
+{txt}(115 real changes made)
+
+{com}. replace schooling=16  if highested=="Bachelor" & wdoby>1962
+{txt}(18 real changes made)
+
+{com}. replace schooling=17  if highested=="Bachelor" & wdoby<=1962
+{txt}(0 real changes made)
+
+{com}. replace schooling=17  if highested=="Masters" 
+{txt}(8 real changes made)
+
+{com}. replace schooling=12  if highested=="Vocational" 
+{txt}(215 real changes made)
+
+{com}. 
+. tab schooling
+
+  {txt}schooling {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          0 {c |}{res}          6        0.40        0.40
+{txt}          7 {c |}{res}        734       48.67       49.07
+{txt}          8 {c |}{res}        155       10.28       59.35
+{txt}         11 {c |}{res}        220       14.59       73.94
+{txt}         12 {c |}{res}        239       15.85       89.79
+{txt}         13 {c |}{res}        128        8.49       98.28
+{txt}         16 {c |}{res}         18        1.19       99.47
+{txt}         17 {c |}{res}          8        0.53      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}      1,508      100.00
+{txt}
+{com}. 
+. 
+. 
+. 
+. /*MOREOVER*/
+. 
+. 
+. drop highested
+{txt}
+{com}. 
+. 
+. 
+. *fix up the mess from letting enumerators enter free text on highest ed variable
+. gen highested=""
+{txt}(2267 missing values generated)
+
+{com}. replace highested="None" if hh1a15=="Didn't go to school"
+{txt}highested was {res}str1{txt} now {res}str4
+{txt}(1 real change made)
+
+{com}. replace highested="" if hh1a15=="HH1A11A"
+{txt}(0 real changes made)
+
+{com}. replace highested="Post secondary" if hh1a15=="Masters"
+{txt}highested was {res}str4{txt} now {res}str14
+{txt}(8 real changes made)
+
+{com}. replace highested="Post secondary" if hh1a15=="Bachelor"
+{txt}(16 real changes made)
+
+{com}. replace highested="Post secondary" if hh1a15=="Ordinary diploma"
+{txt}(109 real changes made)
+
+{com}. replace highested="Post secondary" if hh1a15=="Advanced diploma"
+{txt}(24 real changes made)
+
+{com}. replace highested="Secondary" if hh1a15=="cambridge certicate and middle shool ce"
+{txt}(0 real changes made)
+
+{com}. replace highested="Secondary" if hh1a15=="Middle School cert."
+{txt}(155 real changes made)
+
+{com}. replace highested="Secondary" if hh1a15=="O Level"
+{txt}(220 real changes made)
+
+{com}. replace highested="Secondary" if hh1a15=="A Level"
+{txt}(13 real changes made)
+
+{com}. replace highested="Post secondary" if hh1a15=="cerificate in teaching"
+{txt}(0 real changes made)
+
+{com}. replace highested="None" if hh1a15=="didn't go school"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="didn't go to sc"
+{txt}(0 real changes made)
+
+{com}. replace highested="None" if hh1a15=="didn't go to school"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="didn’t go to school"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="form two"
+{txt}(0 real changes made)
+
+{com}. replace highested="Primary" if hh1a15=="never completed form four"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="never got any certificate since did not"
+{txt}(0 real changes made)
+
+{com}. replace highested="None" if hh1a15=="none"
+{txt}(1 real change made)
+
+{com}. replace highested="None" if hh1a15=="nothing"
+{txt}(1 real change made)
+
+{com}. replace highested="Post secondary" if hh1a15=="ordinary diploma"
+{txt}(6 real changes made)
+
+{com}. replace highested="Primary" if hh1a15=="standard eight"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 10 certificate"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 2"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 5"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="std 6"
+{txt}(1 real change made)
+
+{com}. replace highested="Primary" if hh1a15=="Primary Certificate"
+{txt}(728 real changes made)
+
+{com}. replace highested="Post secondary" if hh1a15=="teaching certificate"
+{txt}(1 real change made)
+
+{com}. replace highested="Post secondary" if hh1a15=="two years technical college"
+{txt}(1 real change made)
+
+{com}. replace highested="Vocational" if hh1a15=="Vocational training cert."
+{txt}(139 real changes made)
+
+{com}. replace highested="Vocational" if hh1a15=="T/T Certificate"
+{txt}(76 real changes made)
+
+{com}. tab highested
+
+     {txt}highested {c |}      Freq.     Percent        Cum.
+{hline 15}{c +}{hline 35}
+          None {c |}{res}          6        0.40        0.40
+{txt}Post secondary {c |}{res}        165       10.94       11.34
+       {txt}Primary {c |}{res}        734       48.67       60.01
+     {txt}Secondary {c |}{res}        388       25.73       85.74
+    {txt}Vocational {c |}{res}        215       14.26      100.00
+{txt}{hline 15}{c +}{hline 35}
+         Total {c |}{res}      1,508      100.00
+{txt}
+{com}. 
+. 
+. 
+. 
+. gen primary=0
+{txt}
+{com}. replace primary=1 if highested=="Primary"
+{txt}(734 real changes made)
+
+{com}. gen secondary=0
+{txt}
+{com}. replace secondary=1 if highested=="Secondary"
+{txt}(388 real changes made)
+
+{com}. gen tertiary=0
+{txt}
+{com}. replace tertiary=1 if highested=="Post secondary"
+{txt}(165 real changes made)
+
+{com}. gen      vocational=0
+{txt}
+{com}. replace vocational=1 if highested=="Vocational"
+{txt}(215 real changes made)
+
+{com}. 
+. sum primary secondary tertiary vocational
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}primary {c |}{res}      2267    .3237759    .4680189          0          1
+{txt}{space 3}secondary {c |}{res}      2267    .1711513    .3767242          0          1
+{txt}{space 4}tertiary {c |}{res}      2267    .0727834     .259838          0          1
+{txt}{space 2}vocational {c |}{res}      2267     .094839    .2930571          0          1
+{txt}
+{com}. 
+.                  
+.                  
+.                  
+.                  
+.                  
+. sjlog using "C:\Users\lexag14\Desktop\University\PhD\Returns To Educatio - Tanzania\Tanzania DataSet\Tanzania_UHPS_data_stata9\Merged\log-files\step2",replace
+{smcl}
+{com}{sf}{ul off}

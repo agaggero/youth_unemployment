@@ -1,0 +1,79 @@
+. 
+. 
+. gen jid=1
+{\smallskip}
+. by wid: replace jid=2 if startdate[_n-1]!=.
+(1413 real changes made)
+{\smallskip}
+. by wid: replace jid=3 if startdate[_n-2]!=.
+(797 real changes made)
+{\smallskip}
+. by wid: replace jid=4 if startdate[_n-3]!=.
+(340 real changes made)
+{\smallskip}
+. by wid: replace jid=5 if startdate[_n-4]!=.
+(118 real changes made)
+{\smallskip}
+. by wid: replace jid=6 if startdate[_n-5]!=.
+(35 real changes made)
+{\smallskip}
+. by wid: replace jid=7 if startdate[_n-6]!=.
+(10 real changes made)
+{\smallskip}
+. by wid: replace jid=8 if startdate[_n-7]!=.
+(3 real changes made)
+{\smallskip}
+. by wid: replace jid=9 if startdate[_n-8]!=.
+(1 real change made)
+{\smallskip}
+. by wid: replace jid=10 if startdate[_n-9]!=.
+(0 real changes made)
+{\smallskip}
+. by wid: replace jid=11 if startdate[_n-10]!=.
+(0 real changes made)
+{\smallskip}
+. sort wid jid
+{\smallskip}
+. tsset wid jid
+       panel variable:  wid (unbalanced)
+        time variable:  jid, 1 to 9
+                delta:  1 unit
+{\smallskip}
+. 
+. 
+. list wid jid startdate stopdate empstatus in 16/35, sepby(wid)
+{\smallskip}
+     {\TLC}\HLI{53}{\TRC}
+     {\VBAR}     wid   jid   startd{\tytilde}e   stopdate       empstatus {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 16. {\VBAR} 2201101     1     1947m1    1959m11        Wage job {\VBAR}
+ 17. {\VBAR} 2201101     2    1959m11     1985m9        Wage job {\VBAR}
+ 18. {\VBAR} 2201101     3     1985m9     1995m1        Wage job {\VBAR}
+ 19. {\VBAR} 2201101     4     1995m1     2005m8   Self employed {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 20. {\VBAR} 2201102     1     1957m6     1997m6      Unemployed {\VBAR}
+ 21. {\VBAR} 2201102     2     1997m6     2005m8   Self employed {\VBAR}
+ 22. {\VBAR} 2201102     3     1999m8     2006m7   Self employed {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 23. {\VBAR} 2201201     1     1980m1    1998m12        Wage job {\VBAR}
+ 24. {\VBAR} 2201201     2     1999m1    2002m12        Wage job {\VBAR}
+ 25. {\VBAR} 2201201     3     2003m5     2005m8   Self employed {\VBAR}
+ 26. {\VBAR} 2201201     4     2006m8     2006m7        Wage job {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 27. {\VBAR} 2201202     1     2005m8     2006m7        Wage job {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 28. {\VBAR} 2201301     1     1974m1     2005m8   Self employed {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 29. {\VBAR} 2201302     1          .     2006m7                 {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 30. {\VBAR} 2201303     1     2006m8     2006m7        Wage job {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 31. {\VBAR} 2201304     1     2005m8     2006m7        Wage job {\VBAR}
+     {\LFTT}\HLI{53}{\RGTT}
+ 32. {\VBAR} 2201401     1    1977m10     1983m4      Unemployed {\VBAR}
+ 33. {\VBAR} 2201401     2     1983m6     1996m1        Wage job {\VBAR}
+ 34. {\VBAR} 2201401     3     1996m3     1999m6      Unemployed {\VBAR}
+ 35. {\VBAR} 2201401     4     1999m7     2004m7        Wage job {\VBAR}
+     {\BLC}\HLI{53}{\BRC}
+{\smallskip}
+. 
